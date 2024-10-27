@@ -1,0 +1,88 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #1d1f20;
+    font-family: 'Orbitron', sans-serif;
+  }
+  
+  .calculator {
+    width: 320px;
+    background-color: #1b1d1f;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0, 255, 170, 0.2);
+    padding: 10px;
+  }
+  
+  .display {
+    background-color: #111;
+    color: #0ff;
+    font-size: 2.5rem;
+    padding: 20px;
+    text-align: right;
+    border-radius: 8px;
+    box-shadow: 0 0 8px rgba(0, 255, 170, 0.5);
+    margin-bottom: 10px;
+  }
+  
+  .display input {
+    width: 100%;
+    background: none;
+    border: none;
+    color: inherit;
+    font-size: inherit;
+    text-align: right;
+  }
+  
+  .buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+  }
+  
+  button {
+    padding: 20px;
+    font-size: 1.5rem;
+    border: 1px solid #333;
+    background-color: #2a2a2a;
+    color: #0ff;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: all 0.2s ease;
+    text-shadow: 0 0 8px rgba(0, 255, 255, 0.7);
+  }
+  
+  button:hover {
+    background-color: #1d1f1f;
+    box-shadow: 0 0 10px #0ff, 0 0 15px rgba(0, 255, 255, 0.5);
+  }
+  
+  button.zero {
+    grid-column: span 2;
+  }
+  
+  button:nth-child(3),
+  button:nth-child(4),
+  button:nth-child(8),
+  button:nth-child(12),
+  button:nth-child(16) {
+    color: #f09fff;
+    text-shadow: 0 0 8px rgba(255, 105, 255, 0.6);
+  }
+  
+  button:nth-child(3):hover,
+  button:nth-child(4):hover,
+  button:nth-child(8):hover,
+  button:nth-child(12):hover,
+  button:nth-child(16):hover {
+    box-shadow: 0 0 10px #f09fff, 0 0 15px rgba(255, 105, 255, 0.5);
+  }
+  
